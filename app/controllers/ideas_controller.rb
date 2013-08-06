@@ -16,4 +16,11 @@ class IdeasController < ApplicationController
     # (the change only existed in Ruby code before this)
     @idea.save
   end
+
+  def destroy
+    # Find the record by id
+    @idea = Idea.find(params[:id])
+    # Destroy & save it
+    @idea.destroy
+  end
 end

@@ -5,6 +5,7 @@
 			<%= idea.title %>
 			<% if idea.done %>
 				X
+        <%= link_to "remove", idea_path(idea), method: :delete %>
 			<% else %>
 				<%= link_to "O", edit_idea_path(idea) %>
 			<% end %>
