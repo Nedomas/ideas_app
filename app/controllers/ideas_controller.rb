@@ -4,5 +4,6 @@ class IdeasController < ApplicationController
   end
 
   def create
+    Idea.create(params[:idea])
   end
 end
