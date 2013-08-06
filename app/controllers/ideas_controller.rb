@@ -4,6 +4,6 @@ class IdeasController < ApplicationController
   end
 
   def create
-    Idea.create(params[:idea])
+    Idea.create(params[:idea].permit(:title))
   end
 end
