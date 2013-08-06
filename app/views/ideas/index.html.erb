@@ -6,7 +6,7 @@
 			<% if idea.done %>
 				X
 			<% else %>
-				O
+				<%= link_to "O", edit_idea_path(idea) %>
 			<% end %>
 		</li>
 	<% end %>
