@@ -6,4 +6,14 @@ class IdeasController < ApplicationController
   def create
     @idea = Idea.create(params[:idea].permit(:title))
   end
+  
+  def edit
+    # Find the record by id
+    @idea = Idea.find(params[:id])
+    # Change the attribute to done
+    @idea.done = true
+    # Save it back to the database
+    # (the change only existed in Ruby code before this)
+    @idea.save
+  end
 end
