@@ -1,6 +1,13 @@
-<h1><%= 2 + 3 %> rules</h1>
+<h1>Ideas!</h1>
 <ol>
-	<% 5.times do %>
-		<li>RULE: You do not talk about FIGHT CLUB.</li>
+	<% @ideas.each do |idea| %>
+		<li>
+			<%= idea.title %>
+			<% if idea.done %>
+				X
+			<% else %>
+				O
+			<% end %>
+		</li>
 	<% end %>
 </ol>
